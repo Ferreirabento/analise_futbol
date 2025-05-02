@@ -3,18 +3,11 @@ import numpy as np
 # se conctar com a planilha
 conectar_dados = pd.read_excel("matches Manchester City.xlsx", sheet_name="Estatísticas")
 
-#coletar os dados
-dados = np.array(conectar_dados)
+def primeiro_tempo():
+    arr = np.array(conectar_dados)
+    macara = arr == "1° Tempo"
+    linhas_com_1tempo = np.any(macara, axis=1)
+    linha_filtrada = arr[linhas_com_1tempo]
+    print(linha_filtrada)
 
-#dados do primeiro tempo
-primeiro_tempo = np.array(dados[1:46])
-
-
-#limpar os dados
-
-#analisar os dados
-#media dos ultimos 5  jogos
-#media dos 3 ultimos jogos
-# processar os dados
-
-#visualização dos dados (opcional)
+primeiro_tempo()
