@@ -56,8 +56,8 @@ def escanteios(tempo_array):
 def cartao_amarelo(tempo_array):
     arr = np.array(tempo_array)
     mascara = arr == "Cartões Amarelo"
-    busca = np.any(mascara)
+    busca = np.any(mascara, axis=1)
     filtro = arr[busca]
     print(filtro)
 
-cartao_amarelo(primeiro_tempo())
+
