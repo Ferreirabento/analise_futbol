@@ -25,6 +25,7 @@ def integral():
     filtro = np.array(arr[linhas])
     return filtro
 
+# categorias
 def gols(tempo_array):
     array = np.array(tempo_array)
     marcara_gols = array == "Gols"
@@ -60,7 +61,7 @@ def cartao_amarelo(tempo_array):
     filtro = arr[busca]
     return filtro
 
-#cada um deles é um tipo de media
+# sub-categorias
 #convertidos
 def convertidos(categoria):
     arr = np.array(categoria)
@@ -138,3 +139,5 @@ def totais_fora(categoria):
 def valores(array):
     arr = np.array(array)
     return arr[0][3]
+
+#ainda tenho que voltar para ver se os dados estão bem ou se tem casas com sem nada
